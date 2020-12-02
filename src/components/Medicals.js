@@ -10,6 +10,7 @@ export const Medicals = ({ medicals, onRemove, changeScreen }) => {
         >
             <View style={styles.card}>
                 <Text style={styles.text}>{medicals.name}</Text>
+                <Text style={styles.text}>{medicals.alertTime}</Text>
             </View>
         </TouchableOpacity>
     )
@@ -18,7 +19,8 @@ export const Medicals = ({ medicals, onRemove, changeScreen }) => {
 const styles = StyleSheet.create({
     card: {
         marginTop: 10,
-        flexDirection: 'column',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
         padding: 10,
         backgroundColor: '#f194ff',
         borderRadius: 5,
